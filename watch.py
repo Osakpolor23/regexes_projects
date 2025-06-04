@@ -7,7 +7,7 @@ def main():
 
 def parse(s):
     # match the embedded url pattern in the argument parsed, using regex 
-    matches = re.search(r'(?:<iframe)? src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9]+)(?:></iframe>)?"',s, re.IGNORECASE)
+    matches = re.search(r'(?:<iframe)? src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9?=_-]+)(?:></iframe>)?"',s, re.IGNORECASE)
 
     # check if matches were found
     if matches:
