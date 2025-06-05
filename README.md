@@ -61,7 +61,9 @@ Example:
 
 
 **Regex Explanation:**
+
 Pattern:
+
     ```regex
     \b um \b
     ```
@@ -94,11 +96,13 @@ Run the script and input the time range:
     ```
 
 **Regex Explanation:**
+
 Pattern:
 
     ```regex
     ^(\d{1,2}):?(\d{2})?\s?(AM|PM)\s(?:to)\s(\d{1,2}):?(\d{2})?\s?(AM|PM)?$
     ```
+
 Captures hours, optional minutes, and AM/PM indicators.
 
 Ensures correct "to" separation.
@@ -127,12 +131,15 @@ Run the script and input an HTML snippet containing an iframe:
     HTML: <iframe src="https://www.youtube.com/embed/abc123"></iframe>
 
 **Output:**
+
     ```sh
     https://youtu.be/abc123
     ```
 
 **Regex Explanation:**
+
 Pattern:
+
     ```regex
     src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9?=_-]+)"
     ```
@@ -169,7 +176,9 @@ Run the script and enter an IP address:
     ```
 
 **Regex Explanation:**
+
 Pattern:
+
     ```regex
     ^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$
     ```
