@@ -31,6 +31,7 @@ Run the script and enter an email when prompted:
 This project utilizes the validator-collection package instead of direct regex for validation.
 
 **Edge Cases Considered:**
+
     Empty input
 
     Incorrectly formatted emails
