@@ -11,6 +11,7 @@ Validates email addresses based on the `validator-collection` package.
 
 #### **Usage:**
 Run the script and enter an email when prompted:
+
     ```sh
     python response.py
 
@@ -21,6 +22,7 @@ Run the script and enter an email when prompted:
     ```
 
 **Output:**
+
     ```sh
         Valid email address
     ```
@@ -52,19 +54,24 @@ Example:
 
 
 **Output:**
+
     ```sh
     Number of "um": 2
     ```
 
 
 **Regex Explanation:**
-Pattern: \bum\b
+Pattern:
+    ```regex
+    \b um \b
+    ```
 
 \b ensures "um" is captured as a standalone word, avoiding cases like "yummy".
 
 re.IGNORECASE ensures case insensitivity.
 
 **Edge Cases Considered:**
+
     Variations like "Um", "UM", "um..." are correctly captured.
 
     Words containing "um" as a substring are ignored.
@@ -88,9 +95,10 @@ Run the script and input the time range:
 
 **Regex Explanation:**
 Pattern:
-```regex
-^(\d{1,2}):?(\d{2})?\s?(AM|PM)\s(?:to)\s(\d{1,2}):?(\d{2})?\s?(AM|PM)?$
-```
+
+    ```regex
+    ^(\d{1,2}):?(\d{2})?\s?(AM|PM)\s(?:to)\s(\d{1,2}):?(\d{2})?\s?(AM|PM)?$
+    ```
 Captures hours, optional minutes, and AM/PM indicators.
 
 Ensures correct "to" separation.
@@ -114,6 +122,7 @@ Run the script and input an HTML snippet containing an iframe:
     python watch.py
 
 **Example:**
+
     ```sh
     HTML: <iframe src="https://www.youtube.com/embed/abc123"></iframe>
 
@@ -124,15 +133,17 @@ Run the script and input an HTML snippet containing an iframe:
 
 **Regex Explanation:**
 Pattern:
-```regex
-src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9?=_-]+)"
+    ```regex
+    src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9?=_-]+)"
+    ```
 
 Captures embedded YouTube video ID from the iframe src attribute.
 
 **Edge Cases Considered:**
-Properly extracts only valid YouTube links.
 
-Ignores unrelated HTML elements.
+    Properly extracts only valid YouTube links.
+
+    Ignores unrelated HTML elements.
 
 ### 5. **IPv4 Validator (`numb3rs.py`)**
 #### **Purpose:**
@@ -152,21 +163,23 @@ Run the script and enter an IP address:
     ```
 
 **Output:**
+
     ```sh
     True
     ```
 
 **Regex Explanation:**
 Pattern:
-```regex
-^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$
-```
+    ```regex
+    ^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$
+    ```
 
 Matches four groups of numbers separated by dots.
 
 Validation ensures each octet is within 0-255.
 
 **Edge Cases Considered:**
+
     Invalid octets (256.5.6.0 fails).
 
     Incorrect formats ("my ip is 192.168.1.1" fails).
